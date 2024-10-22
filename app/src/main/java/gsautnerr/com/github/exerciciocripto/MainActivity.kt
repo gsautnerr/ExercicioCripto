@@ -1,12 +1,11 @@
 package gsautnerr.com.github.exerciciocripto
-import gsautnerr.com.github.exerciciocripto.service.MercadoBitcoinServiceFactory;
 import MercadoBitcoinServiceFactory
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -16,6 +15,7 @@ import java.util.Date
 import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -23,12 +23,13 @@ class MainActivity : AppCompatActivity() {
         // Configurando a toolbar
         val toolbarMain: Toolbar = findViewById(R.id.toolbar_main)
         configureToolbar(toolbarMain)
-    }
 
-    val btnRefresh: Button = findViewById(R.id.btn_refresh)
-    btnRefresh.setOnClickListener {
+
+        val btnRefresh: Button = findViewById(R.id.btn_refresh)
+        btnRefresh.setOnClickListener {
         makeRestCall()
-    }
+        }}
+
     private fun configureToolbar(toolbar: Toolbar) {
         setSupportActionBar(toolbar)
         toolbar.setTitleTextColor(getColor(R.color.white))
